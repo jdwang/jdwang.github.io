@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>JD</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description">
+<meta property="og:type" content="website">
+<meta property="og:title" content="JD">
+<meta property="og:url" content="http://airflylocal.me/page/2/index.html">
+<meta property="og:site_name" content="JD">
+<meta property="og:description">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="JD">
+<meta name="twitter:description">
+  
+    <link rel="alternative" href="/atom.xml" title="JD" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/Users/700bike/web/hexo/css/style.css" type="text/css">
+  
+
+</head>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">JD</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://airflylocal.me"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main">
+  
+    <article id="post-xss-e5-92-8cencodeuri" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/Users/700bike/web/hexo/2012/06/07/xss-e5-92-8cencodeuri/" class="article-date">
+  <time datetime="2012-06-07T00:57:29.000Z" itemprop="datePublished">2012-06-07</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/Users/700bike/web/hexo/categories/笔记/">笔记</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/Users/700bike/web/hexo/2012/06/07/xss-e5-92-8cencodeuri/">xss和encodeURI</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>群里提醒大家要防范XSS攻击。<br>类似test.com/index.html?query=22 的地址，如果22被用作数据插入到页面的dom中，就会有被XSS攻击的风险，风险代码如下：<br>test.com/index.html?query=;}</p>
+<p><script type="text/javascript">// &lt;![CDATA[<br>//被执行的代码<br>// ]]&gt;</script><br>解决方法为encodeURI(22)，然后后台将提交的参数解码，转义，返回。</p>
+<p>值得一提的是在我的页面我尝试对参数进行转义之后再encodeURI，结果后台反馈说提交的参数没有被转义。<br>后来发现原因在于，我的页面是通过window.location.search 来获取链接参数的，这时已经被encode一次，自然无法被转义。<br>遂交给后台处理。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://airflylocal.me/2012/06/07/xss-e5-92-8cencodeuri/" data-id="ciil3xlrt00030qs6ggjeftvf" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-e5-85-b3-e4-ba-8e-e7-bb-91-e5-ae-9a-e5-92-8c-e8-a7-a3-e9-99-a4-e7-bb-91-e5-ae-9a-e5-92-8conce" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/Users/700bike/web/hexo/2012/04/16/e5-85-b3-e4-ba-8e-e7-bb-91-e5-ae-9a-e5-92-8c-e8-a7-a3-e9-99-a4-e7-bb-91-e5-ae-9a-e5-92-8conce/" class="article-date">
+  <time datetime="2012-04-16T00:09:45.000Z" itemprop="datePublished">2012-04-16</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/Users/700bike/web/hexo/categories/笔记/">笔记</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/Users/700bike/web/hexo/2012/04/16/e5-85-b3-e4-ba-8e-e7-bb-91-e5-ae-9a-e5-92-8c-e8-a7-a3-e9-99-a4-e7-bb-91-e5-ae-9a-e5-92-8conce/">关于绑定和解除绑定,和once</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>遇到个需求是绑定滚动事件,当滚动到底则加载新的数据,直到没有数据可供加载,则解除绑定.</p>
+<p>于是有了这样得代码<br>[js]<br>Y.on(‘scroll’,function(){</p>
+<p>this.detach(‘scroll’)</p>
+<p>})<br>[/js]<br>但是这样就解除了滚动的所有函数绑定.</p>
+<p>可以这样解除绑定<br>[js]<br>var testFunc = function(){</p>
+<p>}</p>
+<p>Y.on(‘scroll’,testFunc);</p>
+<p>Y.detach(‘scroll’,testFunc);<br>[/js]<br>可以<br>[js]<br>Y.on(‘scroll’,function testFunc(){</p>
+<p>this.detach(‘scroll’,testFunc)</p>
+<p>})<br>[/js]<br>也可以<br>[js]<br>Y.on(‘scroll’,function(){</p>
+<p>this.detach(‘scroll’,arguments.callee)</p>
+<p>})<br>[/js]<br>jQuery还可以这样<br>[js]<br>$(&amp;quot;#foo&amp;quot;).bind(&amp;quot;click&amp;quot;, function(event){</p>
+<p>alert( $(this).text() );</p>
+<p>$(this).unbind(event);</p>
+<p>});</p>
+<p>[/js]</p>
+<p>还看到个应用,只执行一次就解绑.<br>[js]<br>var once = function (ev, callback) {</p>
+<p>var self = this;</p>
+<p>this.bind(ev, function () {</p>
+<p>callback.apply(self, arguments);</p>
+<p>self.unbind(ev, arguments.callee);//callee是当前函数的引用</p>
+<p>});</p>
+<p>return this;</p>
+<p>};<br>[/js]<br>yui和jQuery分别有自己的once/one方法.</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://airflylocal.me/2012/04/16/e5-85-b3-e4-ba-8e-e7-bb-91-e5-ae-9a-e5-92-8c-e8-a7-a3-e9-99-a4-e7-bb-91-e5-ae-9a-e5-92-8conce/" data-id="ciil3xlt600100qs6a15g6awx" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-405-not-allowed-e7-9a-84-e8-80-bb-e8-be-b1" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/Users/700bike/web/hexo/2012/03/27/405-not-allowed-e7-9a-84-e8-80-bb-e8-be-b1/" class="article-date">
+  <time datetime="2012-03-27T00:36:53.000Z" itemprop="datePublished">2012-03-27</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/Users/700bike/web/hexo/categories/笔记/">笔记</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/Users/700bike/web/hexo/2012/03/27/405-not-allowed-e7-9a-84-e8-80-bb-e8-be-b1/">405 not allowed 的耻辱</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>今天ajax请求服务器一个.json文件，返回说405. 人家问为什么，脑子都没想就说跨域。最后的问题是因为请求采用了POST方法，而Apache、IIS、Nginx等大多数web服务器，都不允许静态文件响应POST请求，否则会返回“HTTP/1.1 405 Method not allowed”错误。<br>解决方法是要么改成get方式，要么改web服务器配置。</p>
+<p>于是很丢人。</p>
+<p>。。。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://airflylocal.me/2012/03/27/405-not-allowed-e7-9a-84-e8-80-bb-e8-be-b1/" data-id="ciil3xlto001e0qs6duqzmjei" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-e7-a5-9e-e9-a9-ac-e6-98-afjsonp" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/Users/700bike/web/hexo/2011/10/14/e7-a5-9e-e9-a9-ac-e6-98-afjsonp/" class="article-date">
+  <time datetime="2011-10-14T01:15:02.000Z" itemprop="datePublished">2011-10-14</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/Users/700bike/web/hexo/categories/笔记/">笔记</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/Users/700bike/web/hexo/2011/10/14/e7-a5-9e-e9-a9-ac-e6-98-afjsonp/">神马是JSONP</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>matamune.com?jsonp=xxxx</p>
+<p>后台会接受这个XXXX作为返回数据的函数名： xxxx(返回的数据)</p>
+<p>前端代码定义这个function xxxx(data){ 在这里ooxx data}</p>
+<p>在成功获取xxxx(返回的数据)后执行</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://airflylocal.me/2011/10/14/e7-a5-9e-e9-a9-ac-e6-98-afjsonp/" data-id="ciil3xlss000m0qs6xscap9v5" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-e7-bb-9d-e5-af-b9-e4-bd-8d-e7-bd-ae-e8-8e-b7-e5-8f-96" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/Users/700bike/web/hexo/2011/10/09/e7-bb-9d-e5-af-b9-e4-bd-8d-e7-bd-ae-e8-8e-b7-e5-8f-96/" class="article-date">
+  <time datetime="2011-10-09T02:16:17.000Z" itemprop="datePublished">2011-10-09</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/Users/700bike/web/hexo/categories/笔记/">笔记</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/Users/700bike/web/hexo/2011/10/09/e7-bb-9d-e5-af-b9-e4-bd-8d-e7-bd-ae-e8-8e-b7-e5-8f-96/">绝对位置获取</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>document.documentElement和document.body</p>
+<p>document.documentElement即页面中的&lt;html&gt;</p>
+<p>document.body即页面中的&lt;body&gt;</p>
+<p>document.documentElement.scrollTop ，chrome支持，其他浏览器该值是0.</p>
+<p>document.body.scrollTop ，非chrome浏览器支持，其他chrome该值是0.</p>
+<p>那么document.documentElement.scrollTop+document.body.scrollTop 即是竖向滚动条的绝对坐标；</p>
+<p>其他的scrollLef等都以此类推。</p>
+<p>getBoundingClientRect</p>
+<p>getBoundingClientRect是相对浏览器坐标的对象，兼容的属性主要有left,top等4个。如果是点击事件的getBoundingClientRect，那么4上下左右很好理解。如果是点击有宽高大小的dom比如一个&lt;input type=’text’ /&gt; 则上下左右是以四个边为起点开始计算的。比如document.getElementsByTagName(‘input’)[0].getBoundingClientRect().left是input左边距离浏览器左边的距离。以此类推。</p>
+<p>那么看看getBoundingClientRect，document.documentElement和document.body在一起能干些什么大事吧！</p>
+<p><a href="http://matamune.com/demo/mouseposition.html" target="_blank" rel="external">demo1</a> 计算鼠标点击的坐标</p>
+<p><a href="http://matamune.com/demo/menuposition.html" target="_blank" rel="external">demo2</a> 输入框的自定义下拉菜单定位</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://airflylocal.me/2011/10/09/e7-bb-9d-e5-af-b9-e4-bd-8d-e7-bd-ae-e8-8e-b7-e5-8f-96/" data-id="ciil3xlsq000k0qs6cc79wj4j" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-e4-b8-80-e4-b8-aacheckbox-e5-85-a8-e9-80-89-e7-bb-84-e4-bb-b6" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/Users/700bike/web/hexo/2011/08/30/e4-b8-80-e4-b8-aacheckbox-e5-85-a8-e9-80-89-e7-bb-84-e4-bb-b6/" class="article-date">
+  <time datetime="2011-08-30T01:50:55.000Z" itemprop="datePublished">2011-08-30</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/Users/700bike/web/hexo/categories/笔记/">笔记</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/Users/700bike/web/hexo/2011/08/30/e4-b8-80-e4-b8-aacheckbox-e5-85-a8-e9-80-89-e7-bb-84-e4-bb-b6/">一个checkbox全选组件</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>一个全选组件，每次写貌似很麻烦，特地整理出来，以后备用。</p>
+<p>分为两个部分，一是勾选全选之后其他checkbox的选中/取消选中的操作；二是全选功能的checkbox项随着其他checkbox项被选中/取消选中时的状态改变；</p>
+<p>其中一和二功能分别独立，可以通过控制构造函数中第三个参数是否为空而对第二个功能进行取舍；</p>
+<p>分为jquery和yui两版。</p>
+<p>请看 <a href="http://matamune.com/demo/checkboxchooseall.html" target="_blank" rel="external">DEMO</a></p>
+<p>需要注意的是放到domready中是为了解决IE的BUG。在IE中DOM未加载完使用JS去清空表单保存的状态是不会得逞的。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://airflylocal.me/2011/08/30/e4-b8-80-e4-b8-aacheckbox-e5-85-a8-e9-80-89-e7-bb-84-e4-bb-b6/" data-id="ciil3xltg00180qs6ro9et7fv" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-cleartimeout" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/Users/700bike/web/hexo/2011/06/24/cleartimeout/" class="article-date">
+  <time datetime="2011-06-23T18:12:02.000Z" itemprop="datePublished">2011-06-24</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/Users/700bike/web/hexo/categories/笔记/">笔记</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/Users/700bike/web/hexo/2011/06/24/cleartimeout/">clearTimeout</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><!-- p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Arial} p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Arial; min-height: 14.0px} -->经常遇到这样的需求，一段延时执行的代码在短时间内多次执行时，延时时间并不会重置。例如几秒后消失的弹窗。</p>
+<p>通过在闭包里定义的变量来clearTimeout</p>
+<p>用闭包是为了避免全局变量的出现</p>
+<p>[js]</p>
+<p>(function(){</p>
+<p>var timer = null;</p>
+<p>var timeSet = function(){</p>
+<p>timer = setTimeout(function(){</p>
+<p>//code</p>
+<p>},3000);</p>
+<p>}</p>
+<p>var timeClear = function(){</p>
+<p>timer &amp;&amp; clearTimeout(timer);</p>
+<p>}</p>
+<p>timeClear();</p>
+<p>timeSet();</p>
+<p>})()</p>
+<p>[/js]</p>
+<p>此demo来自<a href="http://blog.lrain.net/" target="_blank" rel="external">LRain</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://airflylocal.me/2011/06/24/cleartimeout/" data-id="ciil3xltk001a0qs6yqv60hnm" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-e6-b5-ae-e5-8a-a8-e5-b1-82-e7-82-b9-e5-87-bb-e7-a9-ba-e7-99-bd-e5-a4-84-e5-85-b3-e9-97-ad-e7-9a-84-e4-b8-80-e4-b8-aa-e6-80-9d-e8-b7-af" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/Users/700bike/web/hexo/2011/02/15/e6-b5-ae-e5-8a-a8-e5-b1-82-e7-82-b9-e5-87-bb-e7-a9-ba-e7-99-bd-e5-a4-84-e5-85-b3-e9-97-ad-e7-9a-84-e4-b8-80-e4-b8-aa-e6-80-9d-e8-b7-af/" class="article-date">
+  <time datetime="2011-02-14T22:38:43.000Z" itemprop="datePublished">2011-02-15</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/Users/700bike/web/hexo/categories/笔记/">笔记</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/Users/700bike/web/hexo/2011/02/15/e6-b5-ae-e5-8a-a8-e5-b1-82-e7-82-b9-e5-87-bb-e7-a9-ba-e7-99-bd-e5-a4-84-e5-85-b3-e9-97-ad-e7-9a-84-e4-b8-80-e4-b8-aa-e6-80-9d-e8-b7-af/">浮动层点击空白处关闭的一个思路</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <pre>利用冒泡，在body上绑定click，点击页面冒泡到body，使之关闭显示的浮动层。
+当点击浮动层的区域时，阻止冒泡，并不关闭浮动层。
+是浮动层点击空白处关闭的一个思路，也是冒泡事件和阻止冒泡的一个练习
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&amp;lt;style&amp;gt;</span><br><span class="line">*&#123;margin:0;padding:0;&#125;</span><br><span class="line">html,body&#123;height:100%;&#125;</span><br><span class="line">&amp;lt;/style&amp;gt;</span><br><span class="line">&amp;lt;div id=&amp;quot;myid&amp;quot; &amp;gt;点我&amp;lt;/div&amp;gt;</span><br><span class="line">&amp;lt;div style=&amp;quot;display:none;&amp;quot; id=&amp;quot;myshow&amp;quot;&amp;gt;点其他地方隐藏我&amp;lt;/div&amp;gt;</span><br></pre></td></tr></table></figure>
+
+ [js]
+//绑定事件函数
+function addEvent(obj,type,fn){
+  if(obj.addEventListener) obj.addEventListener(type,fn,false);
+  else if(obj.attachEvent){
+    obj[&quot;e&quot;+type+fn]=fn;
+    obj[type+fn]=function(){obj[&quot;e&quot;+type+fn](window.event);}
+    obj.attachEvent(&quot;on&quot;+type,obj[type+fn]);
+  }
+}
+//解除绑定函数
+function removeEvent(obj,type,fn){
+  if(obj.removeEventListener) obj.removeEventListener(type,fn,false);
+  else if(obj.detachEvent){
+    obj.detachEvent(&quot;on&quot;+type,obj[type+fn]);
+    obj[type+fn]=null;
+    obj[&quot;e&quot;+type+fn]=null;
+  }
+}
+var myid = document.getElementById('myid');
+var myshow = document.getElementById('myshow');
+var mybody = document.getElementsByTagName('body')[0];
+addEvent(myid,&quot;click&quot;,newAlert);
+function newAlert(e){
+  if(e &amp;&amp; e.stopPropagation){e.stopPropagation();}else{window.event.cancelBubble=true;} //阻止冒泡，避免点击“点我”时冒泡到body触发newAlertClose()
+  myshow.style.display=&quot;block&quot;;
+  addEvent(myshow,&quot;click&quot;,function(e){
+    if(e &amp;&amp; e.stopPropagation){e.stopPropagation();}else{window.event.cancelBubble=true;} //阻止myshow的冒泡，即点击内容区域不会触发 body的newAlertClose()
+  });
+  addEvent(mybody,&quot;click&quot;,newAlertClose); //为body绑定newAlertClose()
+}
+function newAlertClose(){
+  myshow.style.display=&quot;none&quot;;
+  removeEvent(mybody,&quot;click&quot;,newAlertClose); //为body解除绑定newAlertClose()
+}
+[/js]
+
+</pre>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://airflylocal.me/2011/02/15/e6-b5-ae-e5-8a-a8-e5-b1-82-e7-82-b9-e5-87-bb-e7-a9-ba-e7-99-bd-e5-a4-84-e5-85-b3-e9-97-ad-e7-9a-84-e4-b8-80-e4-b8-aa-e6-80-9d-e8-b7-af/" data-id="ciil3xlsv000o0qs6fbhd64ey" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-e9-81-bf-e5-85-8d-e9-87-8d-e5-a4-8d-e6-89-a7-e8-a1-8c-e7-9a-84-e9-80-bb-e8-be-91" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/Users/700bike/web/hexo/2011/01/19/e9-81-bf-e5-85-8d-e9-87-8d-e5-a4-8d-e6-89-a7-e8-a1-8c-e7-9a-84-e9-80-bb-e8-be-91/" class="article-date">
+  <time datetime="2011-01-18T23:22:32.000Z" itemprop="datePublished">2011-01-19</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/Users/700bike/web/hexo/categories/笔记/">笔记</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/Users/700bike/web/hexo/2011/01/19/e9-81-bf-e5-85-8d-e9-87-8d-e5-a4-8d-e6-89-a7-e8-a1-8c-e7-9a-84-e9-80-bb-e8-be-91/">避免重复执行的逻辑</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>通过设置私有属性来判断是否存在，不存在则创建;</p>
+<p>[js]<br>if (typeof obj._init == undefined){<br>    //code<br>    obj._init = true;<br>}<br>[/js]</p>
+<p>只是一种逻辑，避免重复执行或是加载</p>
+<pre>typeof obj._init 当obj._init不存在时返回undefined
+<pre>obj._init = true 可以为任意变量，用私有属性避免冲突</pre>
+</pre>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://airflylocal.me/2011/01/19/e9-81-bf-e5-85-8d-e9-87-8d-e5-a4-8d-e6-89-a7-e8-a1-8c-e7-9a-84-e9-80-bb-e8-be-91/" data-id="ciil3xlsn000i0qs6sis9m01n" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-instanceof-e4-b8-80-e5-88-99" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/Users/700bike/web/hexo/2011/01/19/instanceof-e4-b8-80-e5-88-99/" class="article-date">
+  <time datetime="2011-01-18T22:49:59.000Z" itemprop="datePublished">2011-01-19</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/Users/700bike/web/hexo/categories/笔记/">笔记</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/Users/700bike/web/hexo/2011/01/19/instanceof-e4-b8-80-e5-88-99/">instanceof 一则</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><div>用instanceof 运算符 判断对象是否是类的一个实例</div></p>
+<p><div>格式为object instanceof class</div></p>
+<p><div>其中object 是任意对象表达式，class 是任意已定义的对象类</div></p>
+<p><div>即判断object是否是class的一个实例</div></p>
+<p><div>DEMO如下</div><br>[js]/*</p>
+<ul>
+<li>@constructor<br><em>/<br>function myObj(width,height){<br>this.width=width;<br>this.height= height;<br>return this.width</em>this.height;<br>}<br>var mo = new myObj(20,30);<br>alert(mo instanceof myObj); //true<br>alert(anotherMo instanceof myObj); //false<br>var anotherMo = new myObj(1,2);<br>[/js]</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://airflylocal.me/2011/01/19/instanceof-e4-b8-80-e5-88-99/" data-id="ciil3xlsc000c0qs6ta9q5i0b" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+  
+    <nav id="page-nav">
+      <a class="extend prev" rel="prev" href="/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/Users/700bike/web/hexo/page/3/">3</a><a class="extend next" rel="next" href="/Users/700bike/web/hexo/page/3/">Next &raquo;</a>
+    </nav>
+  
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/Users/700bike/web/hexo/categories/我的文/">我的文</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/Users/700bike/web/hexo/categories/笔记/">笔记</a><span class="category-list-count">17</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/Users/700bike/web/hexo/tags/my-life/">my life</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/Users/700bike/web/hexo/tags/tool/">tool</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/Users/700bike/web/hexo/tags/前端/">前端</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/Users/700bike/web/hexo/tags/移动/">移动</a><span class="tag-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/Users/700bike/web/hexo/tags/my-life/" style="font-size: 10px;">my life</a> <a href="/Users/700bike/web/hexo/tags/tool/" style="font-size: 10px;">tool</a> <a href="/Users/700bike/web/hexo/tags/前端/" style="font-size: 10px;">前端</a> <a href="/Users/700bike/web/hexo/tags/移动/" style="font-size: 10px;">移动</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/Users/700bike/web/hexo/archives/2015/12/">December 2015</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/Users/700bike/web/hexo/archives/2015/03/">March 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/Users/700bike/web/hexo/archives/2014/09/">September 2014</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/Users/700bike/web/hexo/archives/2014/07/">July 2014</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/Users/700bike/web/hexo/archives/2013/03/">March 2013</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/Users/700bike/web/hexo/archives/2012/08/">August 2012</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/Users/700bike/web/hexo/archives/2012/06/">June 2012</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/Users/700bike/web/hexo/archives/2012/04/">April 2012</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/Users/700bike/web/hexo/archives/2012/03/">March 2012</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/Users/700bike/web/hexo/archives/2011/10/">October 2011</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/Users/700bike/web/hexo/archives/2011/08/">August 2011</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/Users/700bike/web/hexo/archives/2011/06/">June 2011</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/Users/700bike/web/hexo/archives/2011/02/">February 2011</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/Users/700bike/web/hexo/archives/2011/01/">January 2011</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/Users/700bike/web/hexo/archives/2010/10/">October 2010</a><span class="archive-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recents</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/Users/700bike/web/hexo/2015/12/24/hello-world/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/Users/700bike/web/hexo/2015/12/24/hello-test/">hello-test</a>
+          </li>
+        
+          <li>
+            <a href="/Users/700bike/web/hexo/2015/03/13/npm-install-mongodb/">npm install mongodb</a>
+          </li>
+        
+          <li>
+            <a href="/Users/700bike/web/hexo/2014/09/16/e5-86-8d-e7-9c-8bpng/">再看PNG</a>
+          </li>
+        
+          <li>
+            <a href="/Users/700bike/web/hexo/2014/09/09/e5-85-b3-e4-ba-8erem/">关于rem</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2015 JD<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/Users/700bike/web/hexo/fancybox/jquery.fancybox.css" type="text/css">
+  <script src="/Users/700bike/web/hexo/fancybox/jquery.fancybox.pack.js" type="text/javascript"></script>
+
+
+<script src="/Users/700bike/web/hexo/js/script.js" type="text/javascript"></script>
+
+  </div>
+</body>
+</html>

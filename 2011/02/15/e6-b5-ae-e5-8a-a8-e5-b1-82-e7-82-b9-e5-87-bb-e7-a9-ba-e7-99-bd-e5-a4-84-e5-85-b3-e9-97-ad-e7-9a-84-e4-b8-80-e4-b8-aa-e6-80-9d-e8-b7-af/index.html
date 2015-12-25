@@ -3,17 +3,27 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Archives | JD</title>
+  <title>浮动层点击空白处关闭的一个思路 | JD</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description">
-<meta property="og:type" content="website">
-<meta property="og:title" content="JD">
-<meta property="og:url" content="http://airflylocal.me/archives/index.html">
+  <meta name="description" content="利用冒泡，在body上绑定click，点击页面冒泡到body，使之关闭显示的浮动层。
+当点击浮动层的区域时，阻止冒泡，并不关闭浮动层。
+是浮动层点击空白处关闭的一个思路，也是冒泡事件和阻止冒泡的一个练习
+123456&amp;amp;lt;style&amp;amp;gt;*&amp;#123;margin:0;padding:0;&amp;#125;html,body&amp;#123;height:100%;&amp;#125;&amp;amp;l">
+<meta property="og:type" content="article">
+<meta property="og:title" content="浮动层点击空白处关闭的一个思路">
+<meta property="og:url" content="http://airflylocal.me/2011/02/15/e6-b5-ae-e5-8a-a8-e5-b1-82-e7-82-b9-e5-87-bb-e7-a9-ba-e7-99-bd-e5-a4-84-e5-85-b3-e9-97-ad-e7-9a-84-e4-b8-80-e4-b8-aa-e6-80-9d-e8-b7-af/index.html">
 <meta property="og:site_name" content="JD">
-<meta property="og:description">
+<meta property="og:description" content="利用冒泡，在body上绑定click，点击页面冒泡到body，使之关闭显示的浮动层。
+当点击浮动层的区域时，阻止冒泡，并不关闭浮动层。
+是浮动层点击空白处关闭的一个思路，也是冒泡事件和阻止冒泡的一个练习
+123456&amp;amp;lt;style&amp;amp;gt;*&amp;#123;margin:0;padding:0;&amp;#125;html,body&amp;#123;height:100%;&amp;#125;&amp;amp;l">
+<meta property="og:updated_time" content="2015-12-24T09:54:52.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="JD">
-<meta name="twitter:description">
+<meta name="twitter:title" content="浮动层点击空白处关闭的一个思路">
+<meta name="twitter:description" content="利用冒泡，在body上绑定click，点击页面冒泡到body，使之关闭显示的浮动层。
+当点击浮动层的区域时，阻止冒泡，并不关闭浮动层。
+是浮动层点击空白处关闭的一个思路，也是冒泡事件和阻止冒泡的一个练习
+123456&amp;amp;lt;style&amp;amp;gt;*&amp;#123;margin:0;padding:0;&amp;#125;html,body&amp;#123;height:100%;&amp;#125;&amp;amp;l">
   
     <link rel="alternative" href="/atom.xml" title="JD" type="application/atom+xml">
   
@@ -59,240 +69,107 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/Users/700bike/web/hexo/archives/2015" class="archive-year">2015</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/Users/700bike/web/hexo/2015/12/24/hello-world/" class="archive-article-date">
-  <time datetime="2015-12-24T10:08:29.000Z" itemprop="datePublished">Dec 24</time>
+        <section id="main"><article id="post-e6-b5-ae-e5-8a-a8-e5-b1-82-e7-82-b9-e5-87-bb-e7-a9-ba-e7-99-bd-e5-a4-84-e5-85-b3-e9-97-ad-e7-9a-84-e4-b8-80-e4-b8-aa-e6-80-9d-e8-b7-af" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/Users/700bike/web/hexo/2011/02/15/e6-b5-ae-e5-8a-a8-e5-b1-82-e7-82-b9-e5-87-bb-e7-a9-ba-e7-99-bd-e5-a4-84-e5-85-b3-e9-97-ad-e7-9a-84-e4-b8-80-e4-b8-aa-e6-80-9d-e8-b7-af/" class="article-date">
+  <time datetime="2011-02-14T22:38:43.000Z" itemprop="datePublished">2011-02-15</time>
 </a>
-      
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/Users/700bike/web/hexo/categories/笔记/">笔记</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/Users/700bike/web/hexo/2015/12/24/hello-world/">Hello World</a>
+    <h1 class="article-title" itemprop="name">
+      浮动层点击空白处关闭的一个思路
     </h1>
   
 
-    </header>
-  </div>
-</article>
-  
+      </header>
     
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/Users/700bike/web/hexo/2015/12/24/hello-test/" class="archive-article-date">
-  <time datetime="2015-12-24T09:15:45.000Z" itemprop="datePublished">Dec 24</time>
-</a>
+    <div class="article-entry" itemprop="articleBody">
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/Users/700bike/web/hexo/2015/12/24/hello-test/">hello-test</a>
-    </h1>
-  
+        <pre>利用冒泡，在body上绑定click，点击页面冒泡到body，使之关闭显示的浮动层。
+当点击浮动层的区域时，阻止冒泡，并不关闭浮动层。
+是浮动层点击空白处关闭的一个思路，也是冒泡事件和阻止冒泡的一个练习
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&amp;lt;style&amp;gt;</span><br><span class="line">*&#123;margin:0;padding:0;&#125;</span><br><span class="line">html,body&#123;height:100%;&#125;</span><br><span class="line">&amp;lt;/style&amp;gt;</span><br><span class="line">&amp;lt;div id=&amp;quot;myid&amp;quot; &amp;gt;点我&amp;lt;/div&amp;gt;</span><br><span class="line">&amp;lt;div style=&amp;quot;display:none;&amp;quot; id=&amp;quot;myshow&amp;quot;&amp;gt;点其他地方隐藏我&amp;lt;/div&amp;gt;</span><br></pre></td></tr></table></figure>
 
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/Users/700bike/web/hexo/2015/03/13/npm-install-mongodb/" class="archive-article-date">
-  <time datetime="2015-03-13T10:44:49.000Z" itemprop="datePublished">Mar 13</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/Users/700bike/web/hexo/2015/03/13/npm-install-mongodb/">npm install mongodb</a>
-    </h1>
-  
+ [js]
+//绑定事件函数
+function addEvent(obj,type,fn){
+  if(obj.addEventListener) obj.addEventListener(type,fn,false);
+  else if(obj.attachEvent){
+    obj[&quot;e&quot;+type+fn]=fn;
+    obj[type+fn]=function(){obj[&quot;e&quot;+type+fn](window.event);}
+    obj.attachEvent(&quot;on&quot;+type,obj[type+fn]);
+  }
+}
+//解除绑定函数
+function removeEvent(obj,type,fn){
+  if(obj.removeEventListener) obj.removeEventListener(type,fn,false);
+  else if(obj.detachEvent){
+    obj.detachEvent(&quot;on&quot;+type,obj[type+fn]);
+    obj[type+fn]=null;
+    obj[&quot;e&quot;+type+fn]=null;
+  }
+}
+var myid = document.getElementById('myid');
+var myshow = document.getElementById('myshow');
+var mybody = document.getElementsByTagName('body')[0];
+addEvent(myid,&quot;click&quot;,newAlert);
+function newAlert(e){
+  if(e &amp;&amp; e.stopPropagation){e.stopPropagation();}else{window.event.cancelBubble=true;} //阻止冒泡，避免点击“点我”时冒泡到body触发newAlertClose()
+  myshow.style.display=&quot;block&quot;;
+  addEvent(myshow,&quot;click&quot;,function(e){
+    if(e &amp;&amp; e.stopPropagation){e.stopPropagation();}else{window.event.cancelBubble=true;} //阻止myshow的冒泡，即点击内容区域不会触发 body的newAlertClose()
+  });
+  addEvent(mybody,&quot;click&quot;,newAlertClose); //为body绑定newAlertClose()
+}
+function newAlertClose(){
+  myshow.style.display=&quot;none&quot;;
+  removeEvent(mybody,&quot;click&quot;,newAlertClose); //为body解除绑定newAlertClose()
+}
+[/js]
 
-    </header>
+</pre>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://airflylocal.me/2011/02/15/e6-b5-ae-e5-8a-a8-e5-b1-82-e7-82-b9-e5-87-bb-e7-a9-ba-e7-99-bd-e5-a4-84-e5-85-b3-e9-97-ad-e7-9a-84-e4-b8-80-e4-b8-aa-e6-80-9d-e8-b7-af/" data-id="ciil3xlsv000o0qs6fbhd64ey" class="article-share-link">Share</a>
+      
+      
+    </footer>
   </div>
-</article>
   
     
-    
-      
-        </div></section>
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/Users/700bike/web/hexo/archives/2014" class="archive-year">2014</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/Users/700bike/web/hexo/2014/09/16/e5-86-8d-e7-9c-8bpng/" class="archive-article-date">
-  <time datetime="2014-09-16T10:53:35.000Z" itemprop="datePublished">Sep 16</time>
-</a>
-      
+<nav id="article-nav">
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/Users/700bike/web/hexo/2014/09/16/e5-86-8d-e7-9c-8bpng/">再看PNG</a>
-    </h1>
+    <a href="/Users/700bike/web/hexo/2011/06/24/cleartimeout/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          clearTimeout
+        
+      </div>
+    </a>
   
+  
+    <a href="/Users/700bike/web/hexo/2011/01/19/e9-81-bf-e5-85-8d-e9-87-8d-e5-a4-8d-e6-89-a7-e8-a1-8c-e7-9a-84-e9-80-bb-e8-be-91/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">避免重复执行的逻辑</div>
+    </a>
+  
+</nav>
 
-    </header>
-  </div>
+  
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/Users/700bike/web/hexo/2014/09/09/e5-85-b3-e4-ba-8erem/" class="archive-article-date">
-  <time datetime="2014-09-09T06:02:56.000Z" itemprop="datePublished">Sep 9</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/Users/700bike/web/hexo/2014/09/09/e5-85-b3-e4-ba-8erem/">关于rem</a>
-    </h1>
-  
 
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/Users/700bike/web/hexo/2014/07/11/mac-e5-91-bd-e4-bb-a4-e8-a1-8c-e5-8c-96-e6-93-8d-e4-bd-9c-e4-bd-93-e9-aa-8c-e4-b9-8bsvn-e5-b8-b8-e7-94-a8-e5-91-bd-e4-bb-a4-ef-bc-88-e6-8c-81-e7-bb-ad-e6-9b-b4-e6-96-b0-ef-bc-89/" class="archive-article-date">
-  <time datetime="2014-07-11T08:03:01.000Z" itemprop="datePublished">Jul 11</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/Users/700bike/web/hexo/2014/07/11/mac-e5-91-bd-e4-bb-a4-e8-a1-8c-e5-8c-96-e6-93-8d-e4-bd-9c-e4-bd-93-e9-aa-8c-e4-b9-8bsvn-e5-b8-b8-e7-94-a8-e5-91-bd-e4-bb-a4-ef-bc-88-e6-8c-81-e7-bb-ad-e6-9b-b4-e6-96-b0-ef-bc-89/">mac命令行化操作体验之svn常用命令（持续更新）</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/Users/700bike/web/hexo/2014/07/07/e5-85-b3-e4-ba-8e-e8-ae-be-e5-a4-87-e5-88-86-e8-be-a8-e7-8e-87/" class="archive-article-date">
-  <time datetime="2014-07-07T10:11:28.000Z" itemprop="datePublished">Jul 7</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/Users/700bike/web/hexo/2014/07/07/e5-85-b3-e4-ba-8e-e8-ae-be-e5-a4-87-e5-88-86-e8-be-a8-e7-8e-87/">关于设备分辨率</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/Users/700bike/web/hexo/2014/07/04/e4-b8-ba-e4-bb-80-e4-b9-88-e6-88-91-e6-98-af-e4-b8-80-e4-b8-aa-e5-be-b7-e5-9b-bd-e9-98-9f-e7-90-83-e8-bf-b7/" class="archive-article-date">
-  <time datetime="2014-07-04T06:26:21.000Z" itemprop="datePublished">Jul 4</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/Users/700bike/web/hexo/2014/07/04/e4-b8-ba-e4-bb-80-e4-b9-88-e6-88-91-e6-98-af-e4-b8-80-e4-b8-aa-e5-be-b7-e5-9b-bd-e9-98-9f-e7-90-83-e8-bf-b7/">为什么我是一个德国队球迷</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-      
-        </div></section>
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/Users/700bike/web/hexo/archives/2013" class="archive-year">2013</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/Users/700bike/web/hexo/2013/03/20/apply-e5-92-8ccall/" class="archive-article-date">
-  <time datetime="2013-03-20T07:36:16.000Z" itemprop="datePublished">Mar 20</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/Users/700bike/web/hexo/2013/03/20/apply-e5-92-8ccall/">apply和call</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-      
-        </div></section>
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/Users/700bike/web/hexo/archives/2012" class="archive-year">2012</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/Users/700bike/web/hexo/2012/08/17/e5-85-b3-e4-ba-8e-e4-ba-8b-e4-bb-b6-e6-8d-95-e8-8e-b7-e5-92-8c-e5-86-92-e6-b3-a1/" class="archive-article-date">
-  <time datetime="2012-08-16T19:22:37.000Z" itemprop="datePublished">Aug 17</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/Users/700bike/web/hexo/2012/08/17/e5-85-b3-e4-ba-8e-e4-ba-8b-e4-bb-b6-e6-8d-95-e8-8e-b7-e5-92-8c-e5-86-92-e6-b3-a1/">关于事件捕获和冒泡</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
 </section>
         
           <aside id="sidebar">
