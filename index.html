@@ -83,7 +83,8 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="u914D_u7F6Enginx_u5728_u9759_u6001_u9875_u9762__u63A5_u53D7POST_u8BF7_u6C42"><a href="#u914D_u7F6Enginx_u5728_u9759_u6001_u9875_u9762__u63A5_u53D7POST_u8BF7_u6C42" class="headerlink" title="配置nginx在静态页面 接受POST请求"></a>配置nginx在静态页面 接受POST请求</h1><figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># To allow POST on static pages</span></span><br><span class="line"><span class="title">error_page</span> <span class="number">405</span> =<span class="number">200</span> <span class="variable">$uri</span>;</span><br></pre></td></tr></table></figure>
+        <h1 id="u914D_u7F6Enginx_u5728_u9759_u6001_u9875_u9762__u63A5_u53D7POST_u8BF7_u6C42"><a href="#u914D_u7F6Enginx_u5728_u9759_u6001_u9875_u9762__u63A5_u53D7POST_u8BF7_u6C42" class="headerlink" title="配置nginx在静态页面 接受POST请求"></a>配置nginx在静态页面 接受POST请求</h1><p>在nginx.conf 的server中增加以下：</p>
+<figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># To allow POST on static pages</span></span><br><span class="line"><span class="title">error_page</span> <span class="number">405</span> =<span class="number">200</span> <span class="variable">$uri</span>;</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -91,6 +92,8 @@
       <a data-url="http://jdwang.github.io/2016/05/26/nginx-405-POST/" data-id="cionphjxk0005dksfn1gzkr02" class="article-share-link">Share</a>
       
       
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/nginx/">nginx</a></li></ul>
+
     </footer>
   </div>
   
@@ -584,7 +587,7 @@ each(&amp;quot;li&amp;quot;,function(){
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/my-life/">my life</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tool/">tool</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/前端/">前端</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/移动/">移动</a><span class="tag-list-count">1</span></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/my-life/">my life</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/nginx/">nginx</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tool/">tool</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/前端/">前端</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/移动/">移动</a><span class="tag-list-count">1</span></li></ul>
     </div>
   </div>
 
@@ -593,7 +596,7 @@ each(&amp;quot;li&amp;quot;,function(){
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/my-life/" style="font-size: 10px;">my life</a> <a href="/tags/tool/" style="font-size: 10px;">tool</a> <a href="/tags/前端/" style="font-size: 10px;">前端</a> <a href="/tags/移动/" style="font-size: 10px;">移动</a>
+      <a href="/tags/my-life/" style="font-size: 10px;">my life</a> <a href="/tags/nginx/" style="font-size: 10px;">nginx</a> <a href="/tags/tool/" style="font-size: 10px;">tool</a> <a href="/tags/前端/" style="font-size: 10px;">前端</a> <a href="/tags/移动/" style="font-size: 10px;">移动</a>
     </div>
   </div>
 
