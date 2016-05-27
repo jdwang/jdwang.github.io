@@ -61,6 +61,55 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-mongodb-errno-61-Connection-refused" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/05/27/mongodb-errno-61-Connection-refused/" class="article-date">
+  <time datetime="2016-05-27T09:48:02.000Z" itemprop="datePublished">2016-05-27</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/05/27/mongodb-errno-61-Connection-refused/">mongodb errno:61 Connection refused</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="u95EE_u9898_u7684_u4EA7_u751F_uFF1A"><a href="#u95EE_u9898_u7684_u4EA7_u751F_uFF1A" class="headerlink" title="问题的产生："></a>问题的产生：</h2><p>首先<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ brew install mongodb</span><br></pre></td></tr></table></figure></p>
+<p>然后 </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ mkdir myproject</span><br><span class="line">$ <span class="built_in">cd</span> myproject</span><br><span class="line">$ npm init</span><br><span class="line">$ npm install mongodb</span><br></pre></td></tr></table></figure>
+<p>运行</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ mongo</span><br></pre></td></tr></table></figure>
+<p>报错</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">connecting to: <span class="built_in">test</span></span><br><span class="line"><span class="number">2016</span>-<span class="number">05</span>-<span class="number">27</span>T17:<span class="number">39</span>:<span class="number">07.558</span>+<span class="number">0800</span> W NETWORK  [thread1] Failed to connect to <span class="number">127.0</span>.<span class="number">0.1</span>:<span class="number">27017</span>, reason: errno:<span class="number">61</span> Connection refused</span><br><span class="line"><span class="number">2016</span>-<span class="number">05</span>-<span class="number">27</span>T17:<span class="number">39</span>:<span class="number">07.563</span>+<span class="number">0800</span> E QUERY    [thread1] Error: couldn<span class="string">'t connect to server 127.0.0.1:27017, connection attempt failed :</span><br><span class="line">connect@src/mongo/shell/mongo.js:224:14</span><br><span class="line">@(connect):1:6</span></span><br></pre></td></tr></table></figure>
+<h2 id="u95EE_u9898_u7684_u89E3_u51B3_uFF1A"><a href="#u95EE_u9898_u7684_u89E3_u51B3_uFF1A" class="headerlink" title="问题的解决："></a>问题的解决：</h2><blockquote>
+<p>  It can happen when the mongodb service is not running on the mac. To start it, I tried</p>
+<p> brew services start mongodb and it worked.</p>
+<p> Edit: According to the discussion on this PR on homebrew: <a href="https://github.com/Homebrew/homebrew/issues/30628" target="_blank" rel="external">https://github.com/Homebrew/homebrew/issues/30628</a></p>
+</blockquote>
+<p><a href="http://stackoverflow.com/questions/23418134/cannot-connect-to-mongodb-errno61-connection-refused" target="_blank" rel="external">http://stackoverflow.com/questions/23418134/cannot-connect-to-mongodb-errno61-connection-refused</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://jdwang.github.io/2016/05/27/mongodb-errno-61-Connection-refused/" data-id="ciopkazbn000843s6yp584vuv" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-nginx-405-POST" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2016/05/26/nginx-405-POST/" class="article-date">
@@ -89,7 +138,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://jdwang.github.io/2016/05/26/nginx-405-POST/" data-id="cionphjxk0005dksfn1gzkr02" class="article-share-link">Share</a>
+      <a data-url="http://jdwang.github.io/2016/05/26/nginx-405-POST/" data-id="ciopkazbg000543s6u5jtezl0" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/nginx/">nginx</a></li></ul>
@@ -136,7 +185,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://jdwang.github.io/2015/12/24/hello-world/" data-id="cionphjxz000fdksffb3s3yx2" class="article-share-link">Share</a>
+      <a data-url="http://jdwang.github.io/2015/12/24/hello-world/" data-id="ciopkazc5000i43s6b66w8v2d" class="article-share-link">Share</a>
       
       
     </footer>
@@ -186,7 +235,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://jdwang.github.io/2015/03/13/npm-install-mongodb/" data-id="cionphjx50003dksf7h1l74kq" class="article-share-link">Share</a>
+      <a data-url="http://jdwang.github.io/2015/03/13/npm-install-mongodb/" data-id="ciopkazb8000343s69goqikhj" class="article-share-link">Share</a>
       
       
     </footer>
@@ -244,7 +293,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://jdwang.github.io/2014/09/16/e5-86-8d-e7-9c-8bpng/" data-id="cionphjyi000odksfxg8obbr0" class="article-share-link">Share</a>
+      <a data-url="http://jdwang.github.io/2014/09/16/e5-86-8d-e7-9c-8bpng/" data-id="ciopkazcm000r43s6cfn4mc3m" class="article-share-link">Share</a>
       
       
     </footer>
@@ -285,7 +334,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://jdwang.github.io/2014/09/09/e5-85-b3-e4-ba-8erem/" data-id="cionphjyl000qdksfl8h3czek" class="article-share-link">Share</a>
+      <a data-url="http://jdwang.github.io/2014/09/09/e5-85-b3-e4-ba-8erem/" data-id="ciopkazcp000t43s65o9ex2uc" class="article-share-link">Share</a>
       
       
     </footer>
@@ -327,7 +376,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://jdwang.github.io/2014/07/11/mac-e5-91-bd-e4-bb-a4-e8-a1-8c-e5-8c-96-e6-93-8d-e4-bd-9c-e4-bd-93-e9-aa-8c-e4-b9-8bsvn-e5-b8-b8-e7-94-a8-e5-91-bd-e4-bb-a4-ef-bc-88-e6-8c-81-e7-bb-ad-e6-9b-b4-e6-96-b0-ef-bc-89/" data-id="cionphjxo0006dksfemys695w" class="article-share-link">Share</a>
+      <a data-url="http://jdwang.github.io/2014/07/11/mac-e5-91-bd-e4-bb-a4-e8-a1-8c-e5-8c-96-e6-93-8d-e4-bd-9c-e4-bd-93-e9-aa-8c-e4-b9-8bsvn-e5-b8-b8-e7-94-a8-e5-91-bd-e4-bb-a4-ef-bc-88-e6-8c-81-e7-bb-ad-e6-9b-b4-e6-96-b0-ef-bc-89/" data-id="ciopkazbr000943s6lgv64axp" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/tool/">tool</a></li></ul>
@@ -388,7 +437,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://jdwang.github.io/2014/07/07/e5-85-b3-e4-ba-8e-e8-ae-be-e5-a4-87-e5-88-86-e8-be-a8-e7-8e-87/" data-id="cionphjyo000sdksfviinlbnx" class="article-share-link">Share</a>
+      <a data-url="http://jdwang.github.io/2014/07/07/e5-85-b3-e4-ba-8e-e8-ae-be-e5-a4-87-e5-88-86-e8-be-a8-e7-8e-87/" data-id="ciopkazcu000v43s6y7sspn3h" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端/">前端</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/移动/">移动</a></li></ul>
@@ -440,7 +489,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://jdwang.github.io/2014/07/04/e4-b8-ba-e4-bb-80-e4-b9-88-e6-88-91-e6-98-af-e4-b8-80-e4-b8-aa-e5-be-b7-e5-9b-bd-e9-98-9f-e7-90-83-e8-bf-b7/" data-id="cionphjz30012dksfzkh76846" class="article-share-link">Share</a>
+      <a data-url="http://jdwang.github.io/2014/07/04/e4-b8-ba-e4-bb-80-e4-b9-88-e6-88-91-e6-98-af-e4-b8-80-e4-b8-aa-e5-be-b7-e5-9b-bd-e9-98-9f-e7-90-83-e8-bf-b7/" data-id="ciopkazdd001543s6jtpvglbs" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/my-life/">my life</a></li></ul>
@@ -510,52 +559,7 @@ each(&amp;quot;li&amp;quot;,function(){
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://jdwang.github.io/2013/03/20/apply-e5-92-8ccall/" data-id="cionphjza001adksfpcc0erm0" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-e5-85-b3-e4-ba-8e-e4-ba-8b-e4-bb-b6-e6-8d-95-e8-8e-b7-e5-92-8c-e5-86-92-e6-b3-a1" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2012/08/17/e5-85-b3-e4-ba-8e-e4-ba-8b-e4-bb-b6-e6-8d-95-e8-8e-b7-e5-92-8c-e5-86-92-e6-b3-a1/" class="article-date">
-  <time datetime="2012-08-16T19:22:37.000Z" itemprop="datePublished">2012-08-17</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/笔记/">笔记</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2012/08/17/e5-85-b3-e4-ba-8e-e4-ba-8b-e4-bb-b6-e6-8d-95-e8-8e-b7-e5-92-8c-e5-86-92-e6-b3-a1/">关于事件捕获和冒泡</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>关于事件捕获和冒泡，讲得很清楚了。<br><a href="http://www.liloy.info/archives/103.html" target="_blank" rel="external">http://www.liloy.info/archives/103.html</a></p>
-<p>addEventListener 的第三个参数，true即为捕获阶段监听，false则是冒泡阶段监听。<br>都监听需要绑定两次，先true再false</p>
-<p>attachEvent 先绑定后执行 （ie9之前ie专用）</p>
-<p>兼容代码</p>
-<p>[js]<br>if (el.addEventListener) {<br>  el.addEventListener(‘click’, modifyText, false);<br>} else if (el.attachEvent)  {<br>  el.attachEvent(‘onclick’, modifyText);<br>}<br>[/js]</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://jdwang.github.io/2012/08/17/e5-85-b3-e4-ba-8e-e4-ba-8b-e4-bb-b6-e6-8d-95-e8-8e-b7-e5-92-8c-e5-86-92-e6-b3-a1/" data-id="cionphjyz0010dksfm45fycmk" class="article-share-link">Share</a>
+      <a data-url="http://jdwang.github.io/2013/03/20/apply-e5-92-8ccall/" data-id="ciopkazdo001d43s6j1kuvh5x" class="article-share-link">Share</a>
       
       
     </footer>
@@ -605,7 +609,7 @@ each(&amp;quot;li&amp;quot;,function(){
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/05/">May 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/12/">December 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/03/">March 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/09/">September 2014</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/07/">July 2014</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/03/">March 2013</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/08/">August 2012</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/06/">June 2012</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/04/">April 2012</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/03/">March 2012</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2011/10/">October 2011</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2011/08/">August 2011</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2011/06/">June 2011</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2011/02/">February 2011</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2011/01/">January 2011</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2010/10/">October 2010</a><span class="archive-list-count">1</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/05/">May 2016</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/12/">December 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/03/">March 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/09/">September 2014</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/07/">July 2014</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/03/">March 2013</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/08/">August 2012</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/06/">June 2012</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/04/">April 2012</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/03/">March 2012</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2011/10/">October 2011</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2011/08/">August 2011</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2011/06/">June 2011</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2011/02/">February 2011</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2011/01/">January 2011</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2010/10/">October 2010</a><span class="archive-list-count">1</span></li></ul>
     </div>
   </div>
 
@@ -615,6 +619,10 @@ each(&amp;quot;li&amp;quot;,function(){
     <h3 class="widget-title">Recents</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2016/05/27/mongodb-errno-61-Connection-refused/">mongodb errno:61 Connection refused</a>
+          </li>
         
           <li>
             <a href="/2016/05/26/nginx-405-POST/">nginx 405 POST</a>
@@ -630,10 +638,6 @@ each(&amp;quot;li&amp;quot;,function(){
         
           <li>
             <a href="/2014/09/16/e5-86-8d-e7-9c-8bpng/">再看PNG</a>
-          </li>
-        
-          <li>
-            <a href="/2014/09/09/e5-85-b3-e4-ba-8erem/">关于rem</a>
           </li>
         
       </ul>

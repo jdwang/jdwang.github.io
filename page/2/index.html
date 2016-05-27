@@ -61,6 +61,51 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-e5-85-b3-e4-ba-8e-e4-ba-8b-e4-bb-b6-e6-8d-95-e8-8e-b7-e5-92-8c-e5-86-92-e6-b3-a1" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2012/08/17/e5-85-b3-e4-ba-8e-e4-ba-8b-e4-bb-b6-e6-8d-95-e8-8e-b7-e5-92-8c-e5-86-92-e6-b3-a1/" class="article-date">
+  <time datetime="2012-08-16T19:22:37.000Z" itemprop="datePublished">2012-08-17</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/笔记/">笔记</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2012/08/17/e5-85-b3-e4-ba-8e-e4-ba-8b-e4-bb-b6-e6-8d-95-e8-8e-b7-e5-92-8c-e5-86-92-e6-b3-a1/">关于事件捕获和冒泡</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>关于事件捕获和冒泡，讲得很清楚了。<br><a href="http://www.liloy.info/archives/103.html" target="_blank" rel="external">http://www.liloy.info/archives/103.html</a></p>
+<p>addEventListener 的第三个参数，true即为捕获阶段监听，false则是冒泡阶段监听。<br>都监听需要绑定两次，先true再false</p>
+<p>attachEvent 先绑定后执行 （ie9之前ie专用）</p>
+<p>兼容代码</p>
+<p>[js]<br>if (el.addEventListener) {<br>  el.addEventListener(‘click’, modifyText, false);<br>} else if (el.attachEvent)  {<br>  el.attachEvent(‘onclick’, modifyText);<br>}<br>[/js]</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://jdwang.github.io/2012/08/17/e5-85-b3-e4-ba-8e-e4-ba-8b-e4-bb-b6-e6-8d-95-e8-8e-b7-e5-92-8c-e5-86-92-e6-b3-a1/" data-id="ciopkazdb001343s6pqljyb2i" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-xss-e5-92-8cencodeuri" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2012/06/07/xss-e5-92-8cencodeuri/" class="article-date">
@@ -94,7 +139,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://jdwang.github.io/2012/06/07/xss-e5-92-8cencodeuri/" data-id="cionphjwp0000dksf0g444s9r" class="article-share-link">Share</a>
+      <a data-url="http://jdwang.github.io/2012/06/07/xss-e5-92-8cencodeuri/" data-id="ciopkaza9000043s6zsccc4jd" class="article-share-link">Share</a>
       
       
     </footer>
@@ -158,7 +203,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://jdwang.github.io/2012/04/16/e5-85-b3-e4-ba-8e-e7-bb-91-e5-ae-9a-e5-92-8c-e8-a7-a3-e9-99-a4-e7-bb-91-e5-ae-9a-e5-92-8conce/" data-id="cionphjyu000ydksffcmxdz3e" class="article-share-link">Share</a>
+      <a data-url="http://jdwang.github.io/2012/04/16/e5-85-b3-e4-ba-8e-e7-bb-91-e5-ae-9a-e5-92-8c-e8-a7-a3-e9-99-a4-e7-bb-91-e5-ae-9a-e5-92-8conce/" data-id="ciopkazd7001143s60fz8ezhn" class="article-share-link">Share</a>
       
       
     </footer>
@@ -201,7 +246,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://jdwang.github.io/2012/03/27/405-not-allowed-e7-9a-84-e8-80-bb-e8-be-b1/" data-id="cionphjze001cdksfc31pegvo" class="article-share-link">Share</a>
+      <a data-url="http://jdwang.github.io/2012/03/27/405-not-allowed-e7-9a-84-e8-80-bb-e8-be-b1/" data-id="ciopkazds001f43s6634ait6n" class="article-share-link">Share</a>
       
       
     </footer>
@@ -245,7 +290,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://jdwang.github.io/2011/10/14/e7-a5-9e-e9-a9-ac-e6-98-afjsonp/" data-id="cionphjyb000kdksf7aenncn2" class="article-share-link">Share</a>
+      <a data-url="http://jdwang.github.io/2011/10/14/e7-a5-9e-e9-a9-ac-e6-98-afjsonp/" data-id="ciopkazch000n43s6qy2pqx42" class="article-share-link">Share</a>
       
       
     </footer>
@@ -297,7 +342,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://jdwang.github.io/2011/10/09/e7-bb-9d-e5-af-b9-e4-bd-8d-e7-bd-ae-e8-8e-b7-e5-8f-96/" data-id="cionphjy7000idksfp5kh63ql" class="article-share-link">Share</a>
+      <a data-url="http://jdwang.github.io/2011/10/09/e7-bb-9d-e5-af-b9-e4-bd-8d-e7-bd-ae-e8-8e-b7-e5-8f-96/" data-id="ciopkazcd000l43s6wvzmptjp" class="article-share-link">Share</a>
       
       
     </footer>
@@ -343,7 +388,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://jdwang.github.io/2011/08/30/e4-b8-80-e4-b8-aacheckbox-e5-85-a8-e9-80-89-e7-bb-84-e4-bb-b6/" data-id="cionphjz50016dksf03lazuzd" class="article-share-link">Share</a>
+      <a data-url="http://jdwang.github.io/2011/08/30/e4-b8-80-e4-b8-aacheckbox-e5-85-a8-e9-80-89-e7-bb-84-e4-bb-b6/" data-id="ciopkazdf001943s63z9p3yau" class="article-share-link">Share</a>
       
       
     </footer>
@@ -402,7 +447,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://jdwang.github.io/2011/06/24/cleartimeout/" data-id="cionphjz70018dksfs5fuwxsd" class="article-share-link">Share</a>
+      <a data-url="http://jdwang.github.io/2011/06/24/cleartimeout/" data-id="ciopkazdj001b43s6jfcigx51" class="article-share-link">Share</a>
       
       
     </footer>
@@ -484,7 +529,7 @@ function newAlertClose(){
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://jdwang.github.io/2011/02/15/e6-b5-ae-e5-8a-a8-e5-b1-82-e7-82-b9-e5-87-bb-e7-a9-ba-e7-99-bd-e5-a4-84-e5-85-b3-e9-97-ad-e7-9a-84-e4-b8-80-e4-b8-aa-e6-80-9d-e8-b7-af/" data-id="cionphjyf000mdksf6fqp1t0k" class="article-share-link">Share</a>
+      <a data-url="http://jdwang.github.io/2011/02/15/e6-b5-ae-e5-8a-a8-e5-b1-82-e7-82-b9-e5-87-bb-e7-a9-ba-e7-99-bd-e5-a4-84-e5-85-b3-e9-97-ad-e7-9a-84-e4-b8-80-e4-b8-aa-e6-80-9d-e8-b7-af/" data-id="ciopkazcj000p43s61p6m5ed2" class="article-share-link">Share</a>
       
       
     </footer>
@@ -529,55 +574,7 @@ function newAlertClose(){
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://jdwang.github.io/2011/01/19/e9-81-bf-e5-85-8d-e9-87-8d-e5-a4-8d-e6-89-a7-e8-a1-8c-e7-9a-84-e9-80-bb-e8-be-91/" data-id="cionphjy2000gdksfdoljw6kh" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-instanceof-e4-b8-80-e5-88-99" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2011/01/19/instanceof-e4-b8-80-e5-88-99/" class="article-date">
-  <time datetime="2011-01-18T22:49:59.000Z" itemprop="datePublished">2011-01-19</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/笔记/">笔记</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2011/01/19/instanceof-e4-b8-80-e5-88-99/">instanceof 一则</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><div>用instanceof 运算符 判断对象是否是类的一个实例</div></p>
-<p><div>格式为object instanceof class</div></p>
-<p><div>其中object 是任意对象表达式，class 是任意已定义的对象类</div></p>
-<p><div>即判断object是否是class的一个实例</div></p>
-<p><div>DEMO如下</div><br>[js]/*</p>
-<ul>
-<li>@constructor<br><em>/<br>function myObj(width,height){<br>this.width=width;<br>this.height= height;<br>return this.width</em>this.height;<br>}<br>var mo = new myObj(20,30);<br>alert(mo instanceof myObj); //true<br>alert(anotherMo instanceof myObj); //false<br>var anotherMo = new myObj(1,2);<br>[/js]</li>
-</ul>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://jdwang.github.io/2011/01/19/instanceof-e4-b8-80-e5-88-99/" data-id="cionphjxs000adksfmdwnxzsl" class="article-share-link">Share</a>
+      <a data-url="http://jdwang.github.io/2011/01/19/e9-81-bf-e5-85-8d-e9-87-8d-e5-a4-8d-e6-89-a7-e8-a1-8c-e7-9a-84-e9-80-bb-e8-be-91/" data-id="ciopkazc8000j43s6t1314d40" class="article-share-link">Share</a>
       
       
     </footer>
@@ -627,7 +624,7 @@ function newAlertClose(){
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/05/">May 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/12/">December 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/03/">March 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/09/">September 2014</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/07/">July 2014</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/03/">March 2013</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/08/">August 2012</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/06/">June 2012</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/04/">April 2012</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/03/">March 2012</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2011/10/">October 2011</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2011/08/">August 2011</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2011/06/">June 2011</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2011/02/">February 2011</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2011/01/">January 2011</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2010/10/">October 2010</a><span class="archive-list-count">1</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/05/">May 2016</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/12/">December 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/03/">March 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/09/">September 2014</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/07/">July 2014</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/03/">March 2013</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/08/">August 2012</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/06/">June 2012</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/04/">April 2012</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/03/">March 2012</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2011/10/">October 2011</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2011/08/">August 2011</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2011/06/">June 2011</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2011/02/">February 2011</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2011/01/">January 2011</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2010/10/">October 2010</a><span class="archive-list-count">1</span></li></ul>
     </div>
   </div>
 
@@ -637,6 +634,10 @@ function newAlertClose(){
     <h3 class="widget-title">Recents</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2016/05/27/mongodb-errno-61-Connection-refused/">mongodb errno:61 Connection refused</a>
+          </li>
         
           <li>
             <a href="/2016/05/26/nginx-405-POST/">nginx 405 POST</a>
@@ -652,10 +653,6 @@ function newAlertClose(){
         
           <li>
             <a href="/2014/09/16/e5-86-8d-e7-9c-8bpng/">再看PNG</a>
-          </li>
-        
-          <li>
-            <a href="/2014/09/09/e5-85-b3-e4-ba-8erem/">关于rem</a>
           </li>
         
       </ul>

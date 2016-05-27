@@ -3,24 +3,36 @@
 <head>
   <meta charset="utf-8">
   
-  <title>xss和encodeURI | JD</title>
+  <title>mongodb errno:61 Connection refused | JD</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="群里提醒大家要防范XSS攻击。类似test.com/index.html?query=22 的地址，如果22被用作数据插入到页面的dom中，就会有被XSS攻击的风险，风险代码如下：test.com/index.html?query=;}
-// &amp;lt;![CDATA[//被执行的代码// ]]&amp;gt;解决方法为encodeURI(22)，然后后台将提交的参数解码，转义，返回。
-值得一提的是在我的页">
+  <meta name="description" content="问题的产生：首先1$ brew install mongodb
+然后 
+1234$ mkdir myproject$ cd myproject$ npm init$ npm install mongodb
+运行
+1$ mongo
+报错
+12345connecting to: test2016-05-27T17:39:07.558+0800 W NETWORK  [thread1] Failed t">
 <meta property="og:type" content="article">
-<meta property="og:title" content="xss和encodeURI">
-<meta property="og:url" content="http://jdwang.github.io/2012/06/07/xss-e5-92-8cencodeuri/index.html">
+<meta property="og:title" content="mongodb errno:61 Connection refused">
+<meta property="og:url" content="http://jdwang.github.io/2016/05/27/mongodb-errno-61-Connection-refused/index.html">
 <meta property="og:site_name" content="JD">
-<meta property="og:description" content="群里提醒大家要防范XSS攻击。类似test.com/index.html?query=22 的地址，如果22被用作数据插入到页面的dom中，就会有被XSS攻击的风险，风险代码如下：test.com/index.html?query=;}
-// &amp;lt;![CDATA[//被执行的代码// ]]&amp;gt;解决方法为encodeURI(22)，然后后台将提交的参数解码，转义，返回。
-值得一提的是在我的页">
-<meta property="og:updated_time" content="2015-12-24T09:24:54.000Z">
+<meta property="og:description" content="问题的产生：首先1$ brew install mongodb
+然后 
+1234$ mkdir myproject$ cd myproject$ npm init$ npm install mongodb
+运行
+1$ mongo
+报错
+12345connecting to: test2016-05-27T17:39:07.558+0800 W NETWORK  [thread1] Failed t">
+<meta property="og:updated_time" content="2016-05-27T10:04:28.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="xss和encodeURI">
-<meta name="twitter:description" content="群里提醒大家要防范XSS攻击。类似test.com/index.html?query=22 的地址，如果22被用作数据插入到页面的dom中，就会有被XSS攻击的风险，风险代码如下：test.com/index.html?query=;}
-// &amp;lt;![CDATA[//被执行的代码// ]]&amp;gt;解决方法为encodeURI(22)，然后后台将提交的参数解码，转义，返回。
-值得一提的是在我的页">
+<meta name="twitter:title" content="mongodb errno:61 Connection refused">
+<meta name="twitter:description" content="问题的产生：首先1$ brew install mongodb
+然后 
+1234$ mkdir myproject$ cd myproject$ npm init$ npm install mongodb
+运行
+1$ mongo
+报错
+12345connecting to: test2016-05-27T17:39:07.558+0800 W NETWORK  [thread1] Failed t">
   
     <link rel="alternative" href="/atom.xml" title="JD" type="application/atom+xml">
   
@@ -66,16 +78,12 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-xss-e5-92-8cencodeuri" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-mongodb-errno-61-Connection-refused" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2012/06/07/xss-e5-92-8cencodeuri/" class="article-date">
-  <time datetime="2012-06-07T00:57:29.000Z" itemprop="datePublished">2012-06-07</time>
+    <a href="/2016/05/27/mongodb-errno-61-Connection-refused/" class="article-date">
+  <time datetime="2016-05-27T09:48:02.000Z" itemprop="datePublished">2016-05-27</time>
 </a>
     
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/笔记/">笔记</a>
-  </div>
-
   </div>
   <div class="article-inner">
     
@@ -84,7 +92,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      xss和encodeURI
+      mongodb errno:61 Connection refused
     </h1>
   
 
@@ -92,14 +100,24 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>群里提醒大家要防范XSS攻击。<br>类似test.com/index.html?query=22 的地址，如果22被用作数据插入到页面的dom中，就会有被XSS攻击的风险，风险代码如下：<br>test.com/index.html?query=;}</p>
-<p><script type="text/javascript">// &lt;![CDATA[<br>//被执行的代码<br>// ]]&gt;</script><br>解决方法为encodeURI(22)，然后后台将提交的参数解码，转义，返回。</p>
-<p>值得一提的是在我的页面我尝试对参数进行转义之后再encodeURI，结果后台反馈说提交的参数没有被转义。<br>后来发现原因在于，我的页面是通过window.location.search 来获取链接参数的，这时已经被encode一次，自然无法被转义。<br>遂交给后台处理。</p>
+        <h2 id="u95EE_u9898_u7684_u4EA7_u751F_uFF1A"><a href="#u95EE_u9898_u7684_u4EA7_u751F_uFF1A" class="headerlink" title="问题的产生："></a>问题的产生：</h2><p>首先<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ brew install mongodb</span><br></pre></td></tr></table></figure></p>
+<p>然后 </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ mkdir myproject</span><br><span class="line">$ <span class="built_in">cd</span> myproject</span><br><span class="line">$ npm init</span><br><span class="line">$ npm install mongodb</span><br></pre></td></tr></table></figure>
+<p>运行</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ mongo</span><br></pre></td></tr></table></figure>
+<p>报错</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">connecting to: <span class="built_in">test</span></span><br><span class="line"><span class="number">2016</span>-<span class="number">05</span>-<span class="number">27</span>T17:<span class="number">39</span>:<span class="number">07.558</span>+<span class="number">0800</span> W NETWORK  [thread1] Failed to connect to <span class="number">127.0</span>.<span class="number">0.1</span>:<span class="number">27017</span>, reason: errno:<span class="number">61</span> Connection refused</span><br><span class="line"><span class="number">2016</span>-<span class="number">05</span>-<span class="number">27</span>T17:<span class="number">39</span>:<span class="number">07.563</span>+<span class="number">0800</span> E QUERY    [thread1] Error: couldn<span class="string">'t connect to server 127.0.0.1:27017, connection attempt failed :</span><br><span class="line">connect@src/mongo/shell/mongo.js:224:14</span><br><span class="line">@(connect):1:6</span></span><br></pre></td></tr></table></figure>
+<h2 id="u95EE_u9898_u7684_u89E3_u51B3_uFF1A"><a href="#u95EE_u9898_u7684_u89E3_u51B3_uFF1A" class="headerlink" title="问题的解决："></a>问题的解决：</h2><blockquote>
+<p>  It can happen when the mongodb service is not running on the mac. To start it, I tried</p>
+<p> brew services start mongodb and it worked.</p>
+<p> Edit: According to the discussion on this PR on homebrew: <a href="https://github.com/Homebrew/homebrew/issues/30628" target="_blank" rel="external">https://github.com/Homebrew/homebrew/issues/30628</a></p>
+</blockquote>
+<p><a href="http://stackoverflow.com/questions/23418134/cannot-connect-to-mongodb-errno61-connection-refused" target="_blank" rel="external">http://stackoverflow.com/questions/23418134/cannot-connect-to-mongodb-errno61-connection-refused</a></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://jdwang.github.io/2012/06/07/xss-e5-92-8cencodeuri/" data-id="ciopkaza9000043s6zsccc4jd" class="article-share-link">Share</a>
+      <a data-url="http://jdwang.github.io/2016/05/27/mongodb-errno-61-Connection-refused/" data-id="ciopkazbn000843s6yp584vuv" class="article-share-link">Share</a>
       
       
     </footer>
@@ -108,19 +126,10 @@
     
 <nav id="article-nav">
   
-    <a href="/2012/08/17/e5-85-b3-e4-ba-8e-e4-ba-8b-e4-bb-b6-e6-8d-95-e8-8e-b7-e5-92-8c-e5-86-92-e6-b3-a1/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          关于事件捕获和冒泡
-        
-      </div>
-    </a>
   
-  
-    <a href="/2012/04/16/e5-85-b3-e4-ba-8e-e7-bb-91-e5-ae-9a-e5-92-8c-e8-a7-a3-e9-99-a4-e7-bb-91-e5-ae-9a-e5-92-8conce/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2016/05/26/nginx-405-POST/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">关于绑定和解除绑定,和once</div>
+      <div class="article-nav-title">nginx 405 POST</div>
     </a>
   
 </nav>
